@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Manipulation</title>
+  </head>
+  <body>
+    <h1 id="sentence">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure placeat
+      nesciunt, vel minima sapiente itaque voluptate quae atque! Officia fuga,
+      doloremque explicabo tempora vero magnam qui unde sequi, eos earum eaque
+      quisquam tempore, pariatur placeat provident sed! Corrupti vero impedit
+      expedita cum consequuntur officiis, molestias neque officia doloremque
+      totam. Sunt!
+    </h1>
+
+    <script>
+      var sentenceNode = document.getElementById("sentence");
+      var sentence = sentenceNode.innerText;
+
+      var allWords = sentence.split(" ");
+      var bracketWords = " ( " + allWords.join(" ") + " ) ";
+
+      var firstThreeWords = allWords.slice(0, 3);
+
+      var middleWords = allWords.slice(3, 10);
+      var makeSentence = middleWords.join(" ");
+
+      sentenceNode.innerText = makeSentence;
+    </script>
+  </body>
+</html>
